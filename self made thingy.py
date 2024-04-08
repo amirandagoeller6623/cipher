@@ -103,6 +103,8 @@ def createdeck():
             cardsindeck[7] = pushbuilding[random.randint(0, 8)]
         elif amountofcards == 7:
             cardsindeck[7] = pushbuilding[random.randint(0, 8)]
-    print(cardsindeck)
+    if cardsindeck[6] == 6:
+        cardsindeck[6] = pushbuilding[random.randint(0, 8)]
+        cardsindeck[7] = cycle[random.randint(0, 4)]
     return cardsindeck
 decklist = createdeck()
