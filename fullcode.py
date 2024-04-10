@@ -121,7 +121,6 @@ def createdeck():
         amount = amount + 1
     amount = -1
     if numberofchampions > 1:
-        print(0)
         for x in range(7):
             if cardsindeck[amount] == championslot:
                 amount = amount + 2
@@ -359,15 +358,14 @@ def builddeck():
                    "26000009",
                    "26000028"]
     print("Here's a list of every card: {}".format(cardnames))
-    ihatelistdatarules = input("Would you like a random deck?")
+    ihatelistdatarules = input("Would you like a random deck? ")
     deck = []
     if ihatelistdatarules == ("yes"):
         deck = createdeck()
         dupeset = set(deck)
-        while 6 in deck or 7 in deck or len(dupeset) != len(deck):
-
-
+        while "6" in deck or "7" in deck or len(dupeset) != len(deck):
             deck = createdeck()
+            dupeset = set(deck)
     else:
         while len(deck) < 8:
             card = input("What card would you like to add to your deck? ")
